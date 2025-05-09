@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,100 +5,277 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>We Are The Same</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header, footer { background: #004aad; color: white; text-align: center; padding: 1rem; }
-        nav { background: #003080; padding: 1rem; text-align: center; }
-        nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: bold; }
-        .hero { padding: 2rem; background: #f0f0f0; text-align: center; }
-        .products, .booking, .contact-form { padding: 2rem; max-width: 800px; margin: auto; }
-        .product { background: white; padding: 1rem; margin: 1rem 0; border: 1px solid #ccc; }
-        form { display: flex; flex-direction: column; }
-        form input, form textarea, form button { margin: 0.5rem 0; padding: 0.5rem; }
-        .donate-button { background: #28a745; color: white; padding: 1rem; border: none; font-size: 1.2rem; cursor: pointer; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        section {
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product {
+            max-width: 300px;
+            text-align: center;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 15px;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            margin-top: 10px;
+        }
+
+        .community-section {
+            text-align: center;
+            padding: 2rem;
+            background-color: #e1f5fe;
+        }
+
+        .community-section h3 {
+            margin-bottom: 1rem;
+        }
+
+        .partnerships, .courses {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .partnership, .course {
+            background-color: #fff;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 8px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .courses, .partnerships {
+            margin-top: 2rem;
+        }
+
+        .responsive-img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+        }
+
+        .product-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-container img {
+            width: 50%;
+            margin-right: 20px;
+        }
+
+        /* New styles for donation button */
+        .donation-button {
+            background-color: #ffcc00;
+            color: #333;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 20px 40px;
+            border-radius: 50px;
+            border: none;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 30px;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .donation-button:hover {
+            background-color: #ffb300;
+        }
+
     </style>
 </head>
 <body>
+
     <header>
         <h1>We Are The Same</h1>
-        <p>Empowering Disabled Individuals Through Skills and Creativity</p>
+        <p>Empowering disabled individuals through skills and opportunities</p>
     </header>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <section id="products">
+        <h2>Our Products & Services</h2>
 
-    <section id="home" class="hero">
-        <h2>Welcome to Our Community</h2>
-        <p>Learn, Create, and Grow. Support our talented individuals by purchasing unique handmade products.</p>
-        <button class="donate-button">Donate Now</button>
-    </section>
-    <a href="https://www.buymeacoffee.com/Hassanawwed" target="_blank">
-  <button style="background-color: #f7b42c; color: white; padding: 10px 20px; border: none; border-radius: 8px;">Donate</button>
-    </a>
+        <div class="products">
+            <!-- Product 1 -->
+            <div class="product">
+                <div class="product-container">
+                    <img src="images/product1.jpg" alt="Artist drawing">
+                    <div class="product-info">
+                        <h3>Ali - The Artist</h3>
+                        <p>A talented artist who creates beautiful drawings.</p>
+                    </div>
+                </div>
+            </div>
 
-    <section class="products">
-        <h2>Shop Our Products</h2>
-        <div class="product">
-            <h3>Handmade Drawing</h3>
-            <p>Beautiful artwork created by our talented artists.</p>
-            <button>Add to Cart</button>
+            <!-- Product 2 -->
+            <div class="product">
+                <div class="product-container">
+                    <img src="images/product2.jpg" alt="Tailor sewing clothes">
+                    <div class="product-info">
+                        <h3>Fatima - The Tailor</h3>
+                        <p>Designing clothing with creativity and love.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product">
+                <div class="product-container">
+                    <img src="images/product3.jpg" alt="Photographer">
+                    <div class="product-info">
+                        <h3>John - The Photographer</h3>
+                        <p>Capturing moments with passion and creativity.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product">
+                <div class="product-container">
+                    <img src="images/product4.jpg" alt="Baker">
+                    <div class="product-info">
+                        <h3>Sarah - The Baker</h3>
+                        <p>Crafting delicious cakes and pastries with love.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="product">
-            <h3>Custom Clothing</h3>
-            <p>Designed and tailored with love by our community members.</p>
-            <button>Add to Cart</button>
-        </div>
-        <div class="product">
-            <h3>Coding Projects</h3>
-            <p>Unique digital products coded by our skilled individuals.</p>
-            <button>Add to Cart</button>
-        </div>
-    </section>
 
-<!-- Start of gallery section -->
-<section id="gallery" class="products">
-    <h2>Meet Our Community</h2>
-    <div class="product">
-        
-    <img src="images/4fd8c72a-701f-4172-957c-51df86fbea97.png" alt="Description"
-        <p> lynn, a designing clothing with creativity and love.</p>
-    </div>
-</section>
-<!-- End of gallery section -->
-
-<section id="about" class="booking">
-
-    <section id="about" class="booking">
-        <h2>About Us</h2>
-        <p>"We Are The Same" is dedicated to empowering people with disabilities by teaching valuable skills and helping them sell their creations. Most of the profits go directly to the creators.</p>
-
-        <h3>Book a Meeting or Class</h3>
-
-  <form action="https://formsubmit.co/h35630615@gmail.com" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <input type="text" name="phone" placeholder="Phone Number" required>
-    <textarea name="message" placeholder="Your Message or Booking Details" required></textarea>
-    <input type="hidden" name="_captcha" value="false">
-    <button type="submit">Book Now</button>
-        </form>
     </section>
 
+    <!-- Community Section -->
+    <section id="community" class="community-section">
+        <h2>Join Our Community</h2>
+        <p>Chat with others, share your stories, and post pictures.</p>
+        <button>Join Community</button>
+    </section>
+
+    <!-- Partnerships Section -->
+    <section id="partnerships" class="partnerships">
+        <h2>Our Partnerships</h2>
+
+        <div class="partnership">
+            <img src="images/unicef_logo.png" alt="UNICEF Lebanon">
+            <p>UNICEF Lebanon</p>
+        </div>
+        <div class="partnership">
+            <img src="images/march_lebanon_logo.png" alt="March Lebanon">
+            <p>March Lebanon</p>
+        </div>
+        <div class="partnership">
+            <img src="images/mousawat_association_logo.png" alt="Mousawat Association">
+            <p>Mousawat Association</p>
+        </div>
+    </section>
+
+    <!-- Upcoming Courses Section -->
+    <section id="courses" class="courses">
+        <h2>Upcoming Courses</h2>
+
+        <div class="course">
+            <h3>Introduction to C++</h3>
+            <p>Learn C++ programming language and start coding.</p>
+        </div>
+        <div class="course">
+            <h3>Java Programming</h3>
+            <p>Master Java and build powerful applications.</p>
+        </div>
+        <div class="course">
+            <h3>Clothing Design</h3>
+            <p>Learn the art of designing beautiful clothes.</p>
+        </div>
+        <div class="course">
+            <h3>Art Drawing</h3>
+            <p>Learn to draw with expert guidance.</p>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donation">
+        <h2>Support Our Mission</h2>
+        <p>Your donation will help us empower more individuals with disabilities by providing access to resources, education, and opportunities.</p>
+        <a href="https://www.buymeacoffee.com/yourusername" class="donation-button" target="_blank">
+            Donate Now
+        </a>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact" class="contact-form">
         <h2>Contact Us</h2>
 
         <form action="https://formsubmit.co/h35630615@gmail.com" method="POST">
-  <input type="text" name="name" required placeholder="Your Name">
-  <input type="email" name="email" required placeholder="Your Email">
-  <textarea name="message" required placeholder="Your Message"></textarea>
-  <button type="submit">Send</button>
+            <input type="text" name="name" required placeholder="Your Name">
+            <input type="email" name="email" required placeholder="Your Email">
+            <textarea name="message" required placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
         </form>
     </section>
 
     <footer>
         <p>&copy; 2025 We Are The Same. All rights reserved.</p>
     </footer>
+
 </body>
 </html>

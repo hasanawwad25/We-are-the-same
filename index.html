@@ -6,22 +6,42 @@
     <title>We Are The Same</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f0f8ff;
+            color: #333;
         }
 
         header {
-            background-color: #333;
+            background-color: #0066cc;
             color: white;
-            padding: 1rem;
+            padding: 2rem;
             text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-top: 0;
         }
 
         section {
             padding: 2rem;
             margin: 2rem 0;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #0066cc;
+            margin-bottom: 1rem;
         }
 
         .partnerships, .courses, .products {
@@ -33,26 +53,37 @@
 
         .partnership, .course, .product {
             background-color: #fff;
-            padding: 1rem;
+            padding: 1.5rem;
             text-align: center;
-            border-radius: 8px;
-            width: 250px;
+            border-radius: 10px;
+            width: 280px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .partnership:hover, .course:hover, .product:hover {
+            transform: translateY(-5px);
+        }
+
+        .partnership h3, .course h3, .product h3 {
+            font-size: 1.5rem;
+            color: #0066cc;
         }
 
         footer {
-            background-color: #333;
+            background-color: #0066cc;
             color: white;
             text-align: center;
             padding: 1rem;
+            font-size: 1.2rem;
         }
 
         .donation-button {
-            background-color: #ffcc00;
-            color: #333;
+            background-color: #28a745;
+            color: white;
             font-size: 20px;
             font-weight: bold;
-            padding: 20px 40px;
+            padding: 18px 36px;
             border-radius: 50px;
             border: none;
             text-align: center;
@@ -60,17 +91,40 @@
             margin-top: 30px;
             text-decoration: none;
             display: inline-block;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease;
         }
 
         .donation-button:hover {
-            background-color: #ffb300;
+            background-color: #218838;
+        }
+
+        .quote {
+            font-size: 1.5rem;
+            font-style: italic;
+            text-align: center;
+            margin: 30px 0;
+            color: #666;
+        }
+
+        .add-to-cart {
+            background-color: #0066cc;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        .add-to-cart:hover {
+            background-color: #004d99;
         }
 
         .contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             margin-top: 10px;
             border-radius: 5px;
             border: 1px solid #ccc;
@@ -80,29 +134,38 @@
             height: 150px;
         }
 
-        .quote {
-            font-size: 18px;
-            font-style: italic;
-            text-align: center;
-            margin: 30px 0;
-        }
-
-        .product-info {
-            margin-top: 10px;
-        }
-
-        .add-to-cart {
-            background-color: #28a745;
+        .contact-form button {
+            background-color: #0066cc;
             color: white;
-            padding: 8px 16px;
+            padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            text-align: center;
+            margin-top: 10px;
+            font-size: 1rem;
         }
 
-        .add-to-cart:hover {
-            background-color: #218838;
+        .contact-form button:hover {
+            background-color: #004d99;
+        }
+
+        .about-section {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .about-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #0066cc;
+        }
+
+        .about-section p {
+            font-size: 1.2rem;
+            color: #333;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -116,7 +179,7 @@
     <!-- Community Section -->
     <section id="community" class="community-section">
         <h2>Join Our Community</h2>
-        <p>Chat with others, share your stories, and post pictures.</p>
+        <p>Chat with others, share your stories, and post pictures to inspire and support each other.</p>
         <button>Join Community</button>
     </section>
 
@@ -126,15 +189,15 @@
 
         <div class="partnership">
             <h3>UNICEF Lebanon</h3>
-            <p>Partnering to support disabled individuals in Lebanon.</p>
+            <p>Partnering to support disabled individuals in Lebanon by providing essential resources.</p>
         </div>
         <div class="partnership">
             <h3>March Lebanon</h3>
-            <p>Providing services and resources to those in need.</p>
+            <p>Working together to create more opportunities and improve lives for disabled individuals.</p>
         </div>
         <div class="partnership">
             <h3>Mousawat Association</h3>
-            <p>Working together to improve the lives of disabled individuals.</p>
+            <p>Collaboration to provide services for disabled individuals and promote inclusivity.</p>
         </div>
     </section>
 
@@ -145,36 +208,36 @@
         <!-- Programming Projects -->
         <div class="product">
             <h3>Programming Project 1</h3>
-            <p>Learn how to build a simple app in C++.</p>
+            <p>Learn how to build a simple app in C++ for beginners.</p>
             <button class="add-to-cart">Add to Cart</button>
         </div>
         <div class="product">
             <h3>Programming Project 2</h3>
-            <p>Develop a web app using Java.</p>
+            <p>Develop a web app using Java. Ideal for aspiring developers.</p>
             <button class="add-to-cart">Add to Cart</button>
         </div>
 
         <!-- Clothes -->
         <div class="product">
             <h3>Clothing Design 1</h3>
-            <p>Learn how to design your first dress.</p>
+            <p>Step-by-step guide to designing your first dress. Perfect for beginners!</p>
             <button class="add-to-cart">Add to Cart</button>
         </div>
         <div class="product">
             <h3>Clothing Design 2</h3>
-            <p>Advanced sewing techniques for experienced designers.</p>
+            <p>Learn advanced techniques to design professional clothing.</p>
             <button class="add-to-cart">Add to Cart</button>
         </div>
 
         <!-- Arts -->
         <div class="product">
             <h3>Art Drawing 1</h3>
-            <p>Master sketching techniques for beginners.</p>
+            <p>Master sketching techniques and create amazing drawings.</p>
             <button class="add-to-cart">Add to Cart</button>
         </div>
         <div class="product">
             <h3>Art Drawing 2</h3>
-            <p>Learn to paint with watercolors.</p>
+            <p>Explore watercolor techniques and learn to paint stunning artwork.</p>
             <button class="add-to-cart">Add to Cart</button>
         </div>
     </section>
@@ -192,9 +255,9 @@
     </section>
 
     <!-- About Us Section -->
-    <section id="about">
+    <section id="about" class="about-section">
         <h2>About Us</h2>
-        <p>We are a non-profit organization dedicated to providing skills, education, and opportunities to disabled individuals. Our mission is to empower people to live independently, pursue their passions, and earn a livelihood through various courses and support systems.</p>
+        <p>We are a non-profit organization committed to improving the lives of disabled individuals by offering specialized courses and practical skills. Our vision is to create a world where disabled individuals are empowered to live independent lives, pursue their passions, and contribute meaningfully to society. Through partnerships, educational resources, and community support, we help individuals realize their potential.</p>
     </section>
 
     <!-- Contact Section -->
@@ -214,4 +277,3 @@
 
 </body>
 </html>
-        
